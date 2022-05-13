@@ -86,4 +86,10 @@ Detection efficiency was examined by using checking sources in the table below p
 From these considerations, we conclude that for gamma rays of 500 to 1500 keV, the dose rate (μSv/h) can be obtained by multiplying the number of counts per minute (cpm) by 0.090, and the dose (μSv) can be obtained by multiplying the cumulative counts by 0.00150. For dose rates of 1.0 μSv/h or less, the error will be large if it's counted for 1 min, so the value is obtained from the average value over a 10-minute period. Especially at low dose rates of about 0.1 μSv/h or lower, the error would be even larger.<BR>
 以上の検討から、500～1500 keVのガンマ線ならば、この測定器での１分あたりのカウント数(cpm)に0.090を掛けると線量率(μSv/h)が得られ、カウント数の累計に0.00150を掛けると線量(μSv)が求められる、と結論しました。1.0 μSv/h以下の線量率では、１分だけの計数では誤差が大きくなってしまいますので、10分間の平均値から求めます。特に0.1 μSv/h程度あるいはそれ以下の低線量率では、さらに誤差が大きくなると思います。<BR>
 
+## Firmware ファームウエア
+Please find source code and its hex under the src folder. Hostapp is also available. 
+ファームウエアはsrcフォルダに置きました。ホスト側のアプリもあります。
 
+## DISCLAIMER お断り
+This repository is provided "AS IS", without warranty of any kind, either express or implied. Use it on your own responsibility.<BR>
+このリポジトリは「そのまま」で提供されており、明示・暗示を問わず、いかなる保証もありません。ご利用はご自身のご責任でどうぞ。
