@@ -59,5 +59,30 @@ The detector part is based on Hamamatsu Photonics' application circuit example. 
 <tr><td>Nuts</td><td>M3 x 10</td><td>cheap</td><td></td></tr>
 <tr><td>Spacer</td><td>Duracon spacer M3 5 mm x 2</td><td>@19</td><td>Marutsu</td></tr>
 <tr><td>Cables</td><td></td><td></td><td></td></tr>
+</table><BR>
+You may also need: tools such as screwdriver, nippers, pliers, soldering iron + solder, drill, tester, PIC write (PICkit etc.) + PC + software (download).<BR>
+
+## PCB 基板
+<IMG alt=board1 src="img/pcb_detector2.png"><BR>
+<IMG alt=board1 src="img/pcb_detector.png"><BR>
+<IMG alt=board2 src="img/pcb_pic2.png"><BR>
+<IMG alt=board2 src="img/pcb_pic.png"><BR>
+
+## Dose rate calculation 線量率計算
+Detection efficiency was examined by using checking sources in the table below placed at 10 mm from the PIN photodiode. The value is calculated from actual count / number of incident photons presumed from the decay of each radionuclide. It is pretty low, but if we do not use a fluorescent plate or a scintillator, this is about as good as it gets. The absorption coefficient of 662 keV gamma rays in 0.5 mm thick Si is 0.0034, based on the US NIST absorption coefficient (NIST Standard Reference Database 126) and etc.<BR>
+以下の表の密封線源（チェッキングソース）をPINフォトダイオードから10 mmの位置において、検出効率を検討しました。効率の値は、各放射性核種の壊変の様式も含めて求めた効率（＝実際の計数値／入射しているはずのガンマ線光子数）です。低い検出効率ですが、蛍光板もシンチレータも使わなければ、こんなものかと思います。米国NISTの吸収係数(NIST Standard Reference Database 126)などを参考にして、662 keVのガンマ線が厚さ0.5 mmのSiに吸収される割合を計算すると0.0034です。<BR>
+<table border=4 align=left>
+<tr><th>Radionuclide</th><th>Half life (year)</th><th>Radioactivity (kBq)</th><th>Energy (keV)</th>
+ <th>Dose rate (μSv/h at 10 mm)</th><th>Count (cpm)</th><th>Efficiency</th></tr>
+<tr><td><sup>60</sup>Co</td><td>5.2714</td><td>9.038</td><td>1333, 1173</td>
+ <td>27.6</td><td>187.8</td><td>0.00454</td></tr>
+<tr><td><sup>22</sup>Na</td><td>2.6019</td><td>2.588</td><td>1275, 511</td>
+ <td>7.38</td><td>44.4</td><td>0.0029</td></tr>
+<tr><td><sup>137</sup>Cs</td><td>30.07</td><td>33.84</td><td>662</td>
+ <td>26.4</td><td>148.2</td><td>0.00225</td></tr>
+<tr><td><sup>133</sup>Ba</td><td>10.51</td><td>22.38</td><td>356, 303 他</td>
+ <td>14.2</td><td>28.8</td><td>0.00041</td></tr>
 </table>
-You may also need: tools such as screwdriver, nippers, pliers, soldering iron + solder, drill, tester, PIC write (PICkit etc.) + PC + software (download).
+以上の検討から、500～1500 keVのガンマ線ならば、この測定器での１分あたりのカウント数(cpm)に0.090を掛けると線量率(μSv/h)が得られ、カウント数の累計に0.00150を掛けると線量(μSv)が求められる、と結論しました。1.0 μSv/h以下の線量率では、１分だけの計数では誤差が大きくなってしまいますので、10分間の平均値から求めます。特に0.1 μSv/h程度あるいはそれ以下の低線量率では、さらに誤差が大きくなると思います。
+
+
