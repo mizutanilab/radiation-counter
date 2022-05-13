@@ -82,7 +82,8 @@ Detection efficiency was examined by using checking sources in the table below p
  <td>26.4</td><td>148.2</td><td>0.00225</td></tr>
 <tr><td><sup>133</sup>Ba</td><td>10.51</td><td>22.38</td><td>356, 303 他</td>
  <td>14.2</td><td>28.8</td><td>0.00041</td></tr>
-</table>
-以上の検討から、500～1500 keVのガンマ線ならば、この測定器での１分あたりのカウント数(cpm)に0.090を掛けると線量率(μSv/h)が得られ、カウント数の累計に0.00150を掛けると線量(μSv)が求められる、と結論しました。1.0 μSv/h以下の線量率では、１分だけの計数では誤差が大きくなってしまいますので、10分間の平均値から求めます。特に0.1 μSv/h程度あるいはそれ以下の低線量率では、さらに誤差が大きくなると思います。
+</table><BR>
+From these considerations, we conclude that for gamma rays of 500 to 1500 keV, the dose rate (μSv/h) can be obtained by multiplying the number of counts per minute (cpm) by 0.090, and the dose (μSv) can be obtained by multiplying the cumulative counts by 0.00150. For dose rates of 1.0 μSv/h or less, the error will be large if it's counted for 1 min, so the value is obtained from the average value over a 10-minute period. Especially at low dose rates of about 0.1 μSv/h or lower, the error would be even larger.<BR>
+以上の検討から、500～1500 keVのガンマ線ならば、この測定器での１分あたりのカウント数(cpm)に0.090を掛けると線量率(μSv/h)が得られ、カウント数の累計に0.00150を掛けると線量(μSv)が求められる、と結論しました。1.0 μSv/h以下の線量率では、１分だけの計数では誤差が大きくなってしまいますので、10分間の平均値から求めます。特に0.1 μSv/h程度あるいはそれ以下の低線量率では、さらに誤差が大きくなると思います。<BR>
 
 
