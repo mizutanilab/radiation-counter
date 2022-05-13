@@ -15,7 +15,7 @@ The detector case. Three PIN photodiodes S6775 are lined up on the left. They ar
 The detector part is based on Hamamatsu Photonics' application circuit example. 3 PIN photodiodes are used in parallel to increase the detection area. The radiation is converted into a voltage pulse by U1 and multiplied by 50 times by inverting amplification in U2. The frequency response is determined by the characteristics of the op amp at the top (see LMC662 datasheet) and at the bottom by C3 (~ 20 kHz). The output seems to be a pulse of 20 to 50 μsec at tens to over a hundred mV. When it exceeds the threshold (50-60 mV) set by VR1, the PIC is interrupted, converted to AD, and the voltage is recorded. The dotted line part in the upper left corner is placed in an aluminum case to minimize noise, though it is troublesome to adjust VR1 inside the case. The circuit around the PIC microcontroller, LCD, and USB connector are very standard. The area around the MOS FET below is for saving battery power when USB bus power is supplied. If not necessary, connect Vout of U4 to Vcc and omit U5, D7, D8, CN2, 10 μF, 47 kΩ x2, and 10 kΩ x2. You can also omit circuits of RC0-RC2.<BR>
 
 ## BOM 部品表
-<table border=4 align=left>
+<table>
 <tr><th>Type</th><th>Part</th><th>Price(JPY)</th><th>Availability</th></tr>
 <tr><td rowspan=8>IC etc</td><td>LMC662CN</td><td>289 JPY</td><td>Marutsu</td></tr>
 <tr><td>PIC18F2550-I/SP</td><td>880 JPY</td><td>Akidzuki</td></tr>
@@ -59,7 +59,7 @@ The detector part is based on Hamamatsu Photonics' application circuit example. 
 <tr><td>Nuts</td><td>M3 x 10</td><td>cheap</td><td></td></tr>
 <tr><td>Spacer</td><td>Duracon spacer M3 5 mm x 2</td><td>@19</td><td>Marutsu</td></tr>
 <tr><td>Cables</td><td></td><td></td><td></td></tr>
-</table><BR>
+</table>
 You may also need: tools such as screwdriver, nippers, pliers, soldering iron + solder, drill, tester, PIC write (PICkit etc.) + PC + software (download).<BR>
 
 ## PCB 基板
@@ -71,7 +71,7 @@ You may also need: tools such as screwdriver, nippers, pliers, soldering iron + 
 ## Dose rate calculation 線量率計算
 Detection efficiency was examined by using checking sources in the table below placed at 10 mm from the PIN photodiode. The value is calculated from actual count / number of incident photons presumed from the decay of each radionuclide. It is pretty low, but if we do not use a fluorescent plate or a scintillator, this is about as good as it gets. The absorption coefficient of 662 keV gamma rays in 0.5 mm thick Si is 0.0034, based on the US NIST absorption coefficient (NIST Standard Reference Database 126) and etc.<BR>
 以下の表の密封線源（チェッキングソース）をPINフォトダイオードから10 mmの位置において、検出効率を検討しました。効率の値は、各放射性核種の壊変の様式も含めて求めた効率（＝実際の計数値／入射しているはずのガンマ線光子数）です。低い検出効率ですが、蛍光板もシンチレータも使わなければ、こんなものかと思います。米国NISTの吸収係数(NIST Standard Reference Database 126)などを参考にして、662 keVのガンマ線が厚さ0.5 mmのSiに吸収される割合を計算すると0.0034です。<BR>
-<table border=4 align=left>
+<table>
 <tr><th>Radionuclide</th><th>Half life (year)</th><th>Radioactivity (kBq)</th><th>Energy (keV)</th>
  <th>Dose rate (μSv/h at 10 mm)</th><th>Count (cpm)</th><th>Efficiency</th></tr>
 <tr><td><sup>60</sup>Co</td><td>5.2714</td><td>9.038</td><td>1333, 1173</td>
@@ -82,7 +82,7 @@ Detection efficiency was examined by using checking sources in the table below p
  <td>26.4</td><td>148.2</td><td>0.00225</td></tr>
 <tr><td><sup>133</sup>Ba</td><td>10.51</td><td>22.38</td><td>356, 303 他</td>
  <td>14.2</td><td>28.8</td><td>0.00041</td></tr>
-</table><BR>
+</table>
 From these considerations, we conclude that for gamma rays of 500 to 1500 keV, the dose rate (μSv/h) can be obtained by multiplying the number of counts per minute (cpm) by 0.090, and the dose (μSv) can be obtained by multiplying the cumulative counts by 0.00150. For dose rates of 1.0 μSv/h or less, the error will be large if it's counted for 1 min, so the value is obtained from the average value over a 10-minute period. Especially at low dose rates of about 0.1 μSv/h or lower, the error would be even larger.<BR>
 以上の検討から、500～1500 keVのガンマ線ならば、この測定器での１分あたりのカウント数(cpm)に0.090を掛けると線量率(μSv/h)が得られ、カウント数の累計に0.00150を掛けると線量(μSv)が求められる、と結論しました。1.0 μSv/h以下の線量率では、１分だけの計数では誤差が大きくなってしまいますので、10分間の平均値から求めます。特に0.1 μSv/h程度あるいはそれ以下の低線量率では、さらに誤差が大きくなると思います。<BR>
 
