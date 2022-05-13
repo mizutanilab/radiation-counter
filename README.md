@@ -9,8 +9,55 @@ Overall view. Detector is PIN photodiode S6775. The upper left box is for electr
 The detector case. Three PIN photodiodes S6775 are lined up on the left. They are covered with heat-shrinkable tubing for shading, but black vinyl tape or similar would be fine. Since we are dealing with very small signals, the detector part must be electrically shielded. We used an aluminum case with its sheet thickness of 1 mm. The target of measurement is gamma rays from 0.5 MeV to 1.5 MeV. Gamma rays of 662 keV for cesium 137 and 605 keV and 796 keV for cesium 134 can be measured. In this photo taken during production, only five cables are shown, but then a zero-potential cable is also added for a total of six cables. The board is screwed in with 5 mm spacers and grounded to the aluminum chassis.<BR>
 検出器を開けたところです。左に３つ並んでいるのがPINフォトダイオードのS6775です。遮光のために熱収縮チューブをかぶせていますが、黒ビニールテープなどでもいいと思います。ごく小さい信号を扱いますので、検出器部分は電気的にシールドすることが必要になります。用いたのはYM-65（タカチ電機工業）で、アルミ板厚が1 mmです。測定対象は0.5 MeV～1.5 MeVのガンマ線です。セシウム137のガンマ線662 keV、セシウム134の605 keVや796 keVが測れます。製作中の写真で、ケーブルは赤・橙・黄・白・黒の５本しか出ていませんが、その後、ゼロ電位の緑も加えて計６本を出しています。基板は5 mmのスペーサを入れてネジ止めし、シャーシにアースをとっています。<BR>
 
-##Schematic 回路図
+## Schematic 回路図
 <IMG alt=circuit src="img/circuit.png"><BR>
 検出器部分は浜松ホトニクスさんの応用回路例を参考にしたものです。PINフォトダイオードは検出面積をかせぐため、３つ並列にしています。初段のU1により放射線が電圧パルスに変換され、U2の反転増幅で50倍されます。周波数特性は、上はオペアンプの特性で決まり（LMC662のデータシートを参照）、下はC3で20 kHz程度から下がります。出力は、数十～百 mV超で20～50 μ秒のパルスが出ているようです。それがVR1で設定するしきい値（50～60 mV）を超えた時にPICに割り込みがかかり、AD変換して電圧を記録します。左上の点線部分をアルミケースにおさめます。VR1をケース内にしてしまうと調整が面倒なのですが、ノイズ対策です。PICマイコン周辺や液晶への接続、USBコネクタの接続はごく標準的です。下のMOS FET周辺は、USBバスパワーが供給されたときに電池を節約するための部分です。必要なければ、U4のVoutをVccにつなぎ、U5, D7, D8, CN2, 10 μF, 47 kΩ x2, 10 kΩ x2を省略して構いません。RC0～RC2の回路も好みで省略できます。<BR>
 The detector part is based on Hamamatsu Photonics' application circuit example. 3 PIN photodiodes are used in parallel to increase the detection area. The radiation is converted into a voltage pulse by U1 and multiplied by 50 times by inverting amplification in U2. The frequency response is determined by the characteristics of the op amp at the top (see LMC662 datasheet) and at the bottom by C3 (~ 20 kHz). The output seems to be a pulse of 20 to 50 μsec at tens to over a hundred mV. When it exceeds the threshold (50-60 mV) set by VR1, the PIC is interrupted, converted to AD, and the voltage is recorded. The dotted line part in the upper left corner is placed in an aluminum case to minimize noise, though it is troublesome to adjust VR1 inside the case. The circuit around the PIC microcontroller, LCD, and USB connector are very standard. The area around the MOS FET below is for saving battery power when USB bus power is supplied. If not necessary, connect Vout of U4 to Vcc and omit U5, D7, D8, CN2, 10 μF, 47 kΩ x2, and 10 kΩ x2. You can also omit circuits of RC0-RC2.<BR>
-  
+
+## BOM 部品表
+<table border=4 align=left>
+<tr><th>Type</th><th>Part</th><th>Price(JPY)</th><th>Availability</th></tr>
+<tr><td rowspan=8>IC etc</td><td>LMC662CN</td><td>150 JPY</td><td>Akidzuki</td></tr>
+<tr><td>PIC18F2550-I/SP</td><td>350</td><td>Akidzuki</td></tr>
+<tr><td>S-812C50AY</td><td>100 JPY / 8 pcs</td><td>Akidzuki, any 78L05 compatible is ok</td></tr>
+<tr><td>2SJ680</td><td>50</td><td>Akidzuki, any enhanced Pch MOS FET is ok</td></tr>
+<tr><td>S6775 x 3 pcs</td><td>@500</td><td>Akidzuki, 1 piece will work</td></tr>
+<tr><td>SD103A x 2 pcs</td><td>200 JPY / 20 pcs</td><td>Akidzuki, any Schottky Barrier will work</td></tr>
+<tr><td>1N4148</td><td>100 JPY / 50 pcs</td><td></td></tr>
+<tr><td>3 mm LED red/green, 1 each</td><td>@21</td><td></td></tr>
+<tr><td>LCD</td><td>SD1602HULB</td><td>900</td><td>Akidzuki</td></tr>
+<tr><td>Pin header</td><td>18 pins total</td><td>10</td><td>Akidzuki</td></tr>
+<tr><td>Xtal</td><td>20 MHz</td><td>200 / 5 pcs</td><td>Akidzuki</td></tr>
+<tr><td>Piezo speaker</td><td>13 mm</td><td>30</td><td>Akidzuki</td></tr>
+<tr><td rowspan=5>Capacitors</td><td>Ceramic 2 pF x 1</td><td>10</td><td></td></tr>
+<tr><td>Ceramic 15 pF x 2</td><td>@10</td><td></td></tr>
+<tr><td>Film 470 pF x 1</td><td>10</td><td></td></tr>
+<tr><td>Ceramic 0.1 uF x 4</td><td>100 JPY / 10 pcs</td><td></td></tr>
+<tr><td>Film 0.1 uF x 2</td><td>100 JPY / 10 pcs</td><td>C4, C5</td></tr>
+<tr><td>Electrolytic 10 uF x 2</td><td>@30</td><td>Akidzuki</td></tr>
+<tr><td>1/4W Metal film resistor</td><td>10 MΩ x 1</td><td>52</td><td></td></tr>
+<tr><td rowspan=8>1/4W Carbon resistors</td><td>1 MΩ x 1</td><td>cheap</td><td></td></tr>
+<tr><td>68 kΩ x 1</td><td>cheap</td><td>33 kΩ x 2 will work</td></tr>
+<tr><td>47 kΩ x 2</td><td>cheap</td><td>33 kΩ is also ok</td></tr>
+<tr><td>33 kΩ x 1</td><td>cheap</td><td></td></tr>
+<tr><td>20 kΩ x 1</td><td>cheap</td><td>10 kΩ x2 will work</td></tr>
+<tr><td>10 kΩ x 4</td><td>cheap</td><td></td></tr>
+<tr><td>1 kΩ x 3</td><td>cheap</td><td></td></tr>
+<tr><td>560 Ω x 3</td><td>cheap</td><td></td></tr>
+<tr><td>VR</td><td>5 kΩ x 1</td><td>50</td><td>Akidzuki</td></tr>
+<tr><td rowspan=2>Switches</td><td>Tactile</td><td>10</td><td>Akidzuki</td></tr>
+<tr><td>Toggle Switches for PCBs 6P or 3P</td><td>100</td><td>Akidzuki</td></tr>
+<tr><td>Pin socket</td><td>8 pin x 2</td><td>@30</td><td>Akidzuki</td></tr>
+<tr><td>IC socket</td><td>28 pin 300 mil</td><td>80</td><td>Akidzuki</td></tr>
+<tr><td>USB connector</td><td>USB-B</td><td>50</td><td>Akidzuki, if needed</td></tr>
+<tr><td>Universal PCB</td><td>glass epoxy 72 x 48 mm x 2</td><td>@60</td><td>Akidzuki</td></tr>
+<tr><td>Battery snap</td><td>006P</td><td>10</td><td></td></tr>
+<tr><td>Baterry</td><td>9V 006P</td><td>100</td><td></td></tr>
+<tr><td>Aluminum case</td><td>Takachi YM-65</td><td>409</td><td>Kyoritsu</td></tr>
+<tr><td>Plastic case</td><td>ABS case 112-TS</td><td>120</td><td>Akidzuki</td></tr>
+<tr><td>Bolts</td><td>M3x10 mm x 6</td><td></td><td></td></tr>
+<tr><td>Nuts</td><td>M3 x 10</td><td></td><td></td></tr>
+<tr><td>Spacer</td><td>Duracon spacer M3 5 mm x 2</td><td>@10</td><td>Kyoritsu</td></tr>
+<tr><td>Cables</td><td></td><td></td><td></td></tr>
+</table>
+
