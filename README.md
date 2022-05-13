@@ -18,24 +18,24 @@ The detector part is based on Hamamatsu Photonics' application circuit example. 
 <table border=4 align=left>
 <tr><th>Type</th><th>Part</th><th>Price(JPY)</th><th>Availability</th></tr>
 <tr><td rowspan=8>IC etc</td><td>LMC662CN</td><td>289 JPY</td><td>Marutsu</td></tr>
-<tr><td>PIC18F2550-I/SP</td><td>880</td><td>Akidzuki</td></tr>
+<tr><td>PIC18F2550-I/SP</td><td>880 JPY</td><td>Akidzuki</td></tr>
 <tr><td>S-812C50AY</td><td>100 JPY / 8 pcs</td><td>Akidzuki, any 78L05 compatible is ok</td></tr>
-<tr><td>2SJ680</td><td>50</td><td>Akidzuki, any enhanced Pch MOS FET will work</td></tr>
-<tr><td>S6775 x 3 pcs</td><td>@200 x 3</td><td>Akidzuki, 1 piece will work</td></tr>
+<tr><td>2SJ680</td><td>50 JPY</td><td>Akidzuki, any enhanced Pch MOS FET will work</td></tr>
+<tr><td>S6775 x 3 pcs</td><td>@200 JPY x 3</td><td>Akidzuki, 1 piece will work</td></tr>
 <tr><td>SD103A x 2 pcs</td><td>200 JPY / 20 pcs</td><td>Akidzuki, any Schottky Barrier will work</td></tr>
 <tr><td>1N4148</td><td>100 JPY / 50 pcs</td><td>Akidzuki</td></tr>
 <tr><td>3 mm LED red/green, 1 each</td><td>cheap</td><td></td></tr>
-<tr><td>LCD</td><td>SD1602HULB</td><td>900</td><td>Akidzuki</td></tr>
-<tr><td>Pin header</td><td>18 pins total</td><td>10</td><td>Akidzuki</td></tr>
+<tr><td>LCD</td><td>SD1602HULB</td><td>900 JPY</td><td>Akidzuki</td></tr>
+<tr><td>Pin header</td><td>18 pins total</td><td>cheap</td><td>Akidzuki</td></tr>
 <tr><td>Xtal</td><td>20 MHz</td><td>200 JPY / 5 pcs</td><td>Akidzuki P-01757</td></tr>
-<tr><td>Piezo speaker</td><td>PKM13EPYH4000-A0</td><td>30</td><td>Akidzuki</td></tr>
+<tr><td>Piezo speaker</td><td>PKM13EPYH4000-A0</td><td>30 JPY</td><td>Akidzuki</td></tr>
 <tr><td rowspan=6>Capacitors</td><td>Ceramic 2 pF x 1</td><td>cheap</td><td></td></tr>
 <tr><td>Ceramic 15 pF x 2</td><td>cheap</td><td></td></tr>
 <tr><td>Film 470 pF x 1</td><td>10</td><td>Akidzuki P-15040</td></tr>
 <tr><td>Ceramic 0.1 uF x 4</td><td>cheap</td><td></td></tr>
 <tr><td>Film 0.1 uF x 2</td><td>cheap</td><td>C4, C5</td></tr>
 <tr><td>Electrolytic 10 uF x 2</td><td>cheap</td><td></td></tr>
-<tr><td>1/4W metal glaze resistor</td><td>10 MΩ x 1</td><td>55</td><td>Marutsu</td></tr>
+<tr><td>1/4W metal glaze resistor</td><td>10 MΩ x 1</td><td>55 JPY</td><td>Marutsu</td></tr>
 <tr><td rowspan=8>1/4W carbon resistors</td><td>1 MΩ x 1</td><td>cheap</td><td></td></tr>
 <tr><td>68 kΩ x 1</td><td>cheap</td><td>33 kΩ x 2 will work</td></tr>
 <tr><td>47 kΩ x 2</td><td>cheap</td><td>33 kΩ is also ok</td></tr>
@@ -44,11 +44,11 @@ The detector part is based on Hamamatsu Photonics' application circuit example. 
 <tr><td>10 kΩ x 4</td><td>cheap</td><td></td></tr>
 <tr><td>1 kΩ x 3</td><td>cheap</td><td></td></tr>
 <tr><td>560 Ω x 3</td><td>cheap</td><td></td></tr>
-<tr><td>VR</td><td>5 kΩ x 1</td><td>50</td><td>Akidzuki P-14904</td></tr>
-<tr><td rowspan=2>Switches</td><td>Tactile</td><td>10</td><td>Akidzuki</td></tr>
-<tr><td>Toggle Switches for PCBs 6P or 3P</td><td>100</td><td>Akidzuki</td></tr>
+<tr><td>VR</td><td>5 kΩ x 1</td><td>50 JPY</td><td>Akidzuki P-14904</td></tr>
+<tr><td rowspan=2>Switches</td><td>Tactile</td><td>cheap</td><td>Akidzuki</td></tr>
+<tr><td>Toggle Switch, 6P or 3P</td><td>80</td><td>Akidzuki</td></tr>
 <tr><td>Pin socket</td><td>8 pin x 2</td><td>@30</td><td>Akidzuki</td></tr>
-<tr><td>IC socket</td><td>28 pin 300 mil</td><td>80</td><td>Akidzuki</td></tr>
+<tr><td>IC socket</td><td>28 pin 300 mil</td><td>70</td><td>Akidzuki</td></tr>
 <tr><td>USB connector</td><td>USB-B</td><td>50</td><td>Akidzuki, if needed</td></tr>
 <tr><td>Universal PCB</td><td>glass epoxy 72 x 48 mm x 2</td><td>@60</td><td>Akidzuki</td></tr>
 <tr><td>Battery snap</td><td>006P (PP3)</td><td>cheap</td><td></td></tr>
