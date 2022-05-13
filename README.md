@@ -47,7 +47,7 @@ The detector part is based on Hamamatsu Photonics' application circuit example. 
 <tr><td>VR</td><td>5 kΩ x 1</td><td>50 JPY</td><td>Akidzuki P-14904</td></tr>
 <tr><td rowspan=2>Switches</td><td>Tactile</td><td>cheap</td><td>Akidzuki</td></tr>
 <tr><td>Toggle Switch, 6P or 3P</td><td>80</td><td>Akidzuki</td></tr>
-<tr><td>Pin socket</td><td>8 pin x 2</td><td>@30</td><td>Akidzuki</td></tr>
+<tr><td>Pin socket</td><td>16 pin</td><td>80</td><td>Akidzuki C-05779</td></tr>
 <tr><td>IC socket</td><td>28 pin 300 mil</td><td>70</td><td>Akidzuki</td></tr>
 <tr><td>USB connector</td><td>USB-B</td><td>50</td><td>Akidzuki, if needed</td></tr>
 <tr><td>Universal PCB</td><td>glass epoxy 72 x 48 mm x 2</td><td>@60</td><td>Akidzuki</td></tr>
@@ -60,4 +60,4 @@ The detector part is based on Hamamatsu Photonics' application circuit example. 
 <tr><td>Spacer</td><td>Duracon spacer M3 5 mm x 2</td><td>@19</td><td>Marutsu</td></tr>
 <tr><td>Cables</td><td></td><td></td><td></td></tr>
 </table>
-
+You may also need: tools such as screwdriver, nippers, pliers, soldering iron + solder, drill, tester, PIC write (PICkit etc.) + PC + software (download).
