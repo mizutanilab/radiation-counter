@@ -1,6 +1,6 @@
 # Portable dosimeter ポータブル線量計
 ## Radiation counter using PIN photodiode 放射線測定器PINフォトダイオード使用
-The original was created at the time of the Great East Japan Earthquake in 2011. The key point of this instrument is that it is calibrated with a standard source and dose estimation is possible. <BR>
+The original was created at the time of the Great East Japan Earthquake in 2011. The point of this repo is that it is calibrated with a standard source, so dose estimation is possible. <BR>
 オリジナルは2011年の東日本大震災の時に作成しました。この機器のポイントは、標準線源で校正されていて、線量の見積もりか可能なことです。<BR>
 <IMG alt=Overall src="img/overall.png"><BR>
 Overall view. Detector is PIN photodiode S6775. The upper left box is for electrical shielding and contains the PIN photodiode. Gamma rays can be detected throught the shielding case. If you would like to detect X-rays below 50 keV or beta rays, please drill a hole in the case and cover it with black paper or aluminum foil. To reduce noise, a 9 V battery in the upper right corner is as the power source. Counting are done by the PIC microcontroller in the lower half. The LCD display is from the prototype and is different from that of the dosimeter. The overall size is approximately 115 x 80 x 25 mm.<BR>
@@ -87,7 +87,7 @@ From these considerations, we conclude that for gamma rays of 500 to 1500 keV, t
 以上の検討から、500～1500 keVのガンマ線ならば、この測定器での１分あたりのカウント数(cpm)に0.090を掛けると線量率(μSv/h)が得られ、カウント数の累計に0.00150を掛けると線量(μSv)が求められる、と結論しました。1.0 μSv/h以下の線量率では、１分だけの計数では誤差が大きくなってしまいますので、10分間の平均値から求めます。特に0.1 μSv/h程度あるいはそれ以下の低線量率では、さらに誤差が大きくなると思います。<BR>
 
 ## Firmware ファームウエア
-Please find source code and its hex under the src folder. Hostapp is also available. 
+Please find source code and its hex under the src folder. Hostapp is also available. <BR>
 ファームウエアはsrcフォルダに置きました。ホスト側のアプリもあります。
 
 ## DISCLAIMER お断り
