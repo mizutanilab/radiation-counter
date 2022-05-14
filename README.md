@@ -1,6 +1,6 @@
 # Portable dosimeter ポータブル線量計
 ## Radiation counter using PIN photodiode 放射線測定器PINフォトダイオード使用
-Originally it was created at the time of the Great East Japan Earthquake in 2011. The point of this repo is that it is calibrated with radioactive checking sources, so dose estimation is possible. <BR>
+Originally it was created at the time of the Great East Japan Earthquake in 2011. The point of this repo is that it's calibrated using radioactive check sources, so dose estimation is possible from its readout. <BR>
 もともとは2011年の東日本大震災の時に作成したものです。このリポジトリのポイントは、線量が標準線源で校正されていて、その見積もりか可能なことです。<BR><BR>
 <IMG align="left" alt=Overall src="img/overall.png">
 Overall view. It uses PIN photodiodes S6775 as detector. The upper left box contains the PIN photodiodes and electrically shields them. Most gamma rays can be detected throught the shielding. If you would like to detect X-rays below 50 keV or beta rays, please drill a hole at the front of the detectors and cover it with black paper or aluminum foil. To reduce noise, a 9 V battery in the upper right corner is used as power source in this dosimeter. Counting is done by a PIC microcontroller in the lower half. The display contents are those of a prototype and so different from that of the uploaded firmware. The overall size is approximately 115 x 80 x 25 mm.<BR>
@@ -63,13 +63,13 @@ The detector part is based on Hamamatsu Photonics' application circuit example. 
 You may also need: tools such as screwdriver, nippers, pliers, soldering iron + solder, drill, tester, PIC write (PICkit etc.) + PC + software (download).<BR>
 
 ## PCB 基板
-Detector<BR>
+### Detector<BR>
 <IMG alt=board1 src="img/pcb_detector2.png"> <IMG alt=board1 src="img/pcb_detector.png"><BR><BR>
-Controller<BR>
+### Controller<BR>
 <IMG alt=board2 src="img/pcb_pic2.png"> <IMG alt=board2 src="img/pcb_pic.png"><BR>
 
 ## Dose rate calculation 線量率計算
-Detection efficiency was examined by using checking sources in the table below by placing them at 10 mm from the PIN photodiodes. The value is calculated from actual count / number of incident photons presumed from the decay of each radionuclide. The obtained efficiency is pretty low, but if we do not use fluorescent screen or scintillator, this is about as good as it gets. The absorption coefficient of 662 keV gamma rays in 0.5 mm thick Si is calculated to be 0.0034 from the US NIST absorption coefficient (NIST Standard Reference Database 126), which is compatible with the value in the table.<BR>
+Detection efficiency was examined by using check sources in the table below by placing them at 10 mm from the PIN photodiodes. The value is calculated from actual count / number of incident photons presumed from the decay of each radionuclide. The obtained efficiency is pretty low, but if we do not use fluorescent screen or scintillator, this is about as good as it gets. The absorption coefficient of 662 keV gamma rays in 0.5 mm thick Si is calculated to be 0.0034 from the US NIST absorption coefficient (NIST Standard Reference Database 126), which is compatible with the value in the table.<BR>
 以下の表の密封線源（チェッキングソース）をPINフォトダイオードから10 mmの位置において、検出効率を検討しました。効率の値は、各放射性核種の壊変の様式も含めて求めた効率（＝実際の計数値／入射しているはずのガンマ線光子数）です。低い検出効率ですが、蛍光板もシンチレータも使わなければ、こんなものかと思います。米国NISTの吸収係数(NIST Standard Reference Database 126)などを参考にして、662 keVのガンマ線が厚さ0.5 mmのSiに吸収される割合を計算すると0.0034で、表の値とまあ同じぐらいです。<BR>
 <table>
 <tr><th>Radionuclide</th><th>Half life (year)</th><th>Radioactivity (kBq)</th><th>Energy (keV)</th>
